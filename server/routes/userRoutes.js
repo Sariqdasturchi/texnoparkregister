@@ -15,6 +15,8 @@ router.post('/register', async (req, res) => {
 
 // Foydalanuvchilarni olish
 router.get('/users', async (req, res) => {
+  console.log(req.body);
+  console.log(res.status)
   try {
     const users = await User.find();
     res.status(200).json(users);
